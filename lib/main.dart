@@ -9,14 +9,12 @@ class Product {
   final String title;
   final String subtitle;
   final int rawPrice; // harga angka untuk perhitungan
-  final IconData icon;
   final String description;
 
   const Product({
     required this.title,
     required this.subtitle,
     required this.rawPrice,
-    required this.icon,
     required this.description,
   });
 
@@ -165,15 +163,7 @@ class KatalogScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: ListTile(
-              contentPadding: const EdgeInsets.all(12.0),
-              leading: CircleAvatar(
-                radius: 24,
-                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                child: Icon(
-                  product.icon,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
+              contentPadding: const EdgeInsets.all(16.0),
               title: Text(
                 product.title,
                 style: const TextStyle(
@@ -261,7 +251,6 @@ class _DetailKatalogScreenState extends State<DetailKatalogScreen> {
       currentList.add(CartItem(product: widget.product, quantity: _itemCount));
     }
 
-    // Trigger update ke seluruh widget penonton keranjang
     cartNotifier.value = currentList;
 
     ScaffoldMessenger.of(context).showSnackBar(
@@ -296,24 +285,6 @@ class _DetailKatalogScreenState extends State<DetailKatalogScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
-              child: Container(
-                padding: const EdgeInsets.all(24.0),
-                decoration: BoxDecoration(
-                  color: Theme.of(context)
-                      .colorScheme
-                      .primaryContainer
-                      .withOpacity(0.5),
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  widget.product.icon,
-                  size: 72,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
-            ),
-            const SizedBox(height: 24),
             Text(
               widget.product.title,
               style: const TextStyle(
@@ -517,9 +488,6 @@ class _CartScreenState extends State<CartScreen> {
                     return Card(
                       margin: const EdgeInsets.symmetric(vertical: 6.0),
                       child: ListTile(
-                        leading: CircleAvatar(
-                          child: Icon(item.product.icon),
-                        ),
                         title: Text(
                           item.product.title,
                           style: const TextStyle(fontWeight: FontWeight.bold),
