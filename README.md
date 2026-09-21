@@ -13,7 +13,6 @@ Aplikasi ini adalah simulasi aplikasi katalog produk kebutuhan sehari-hari yang 
    - AppBar dengan tombol Back otomatis ke katalog.
    - Ikon besar, nama produk, harga, dan deskripsi berlatar warna pastel (`Colors.blue[50]`).
    - Interaktivitas State:
-     - Toggle Favorit: Menandai produk sebagai favorit (ikon hati berubah merah).
      - Counter Jumlah: Penambahan & pengurangan kuantitas item.
      - Tambah ke Keranjang: Menyimpan produk secara real-time ke dalam keranjang.
 

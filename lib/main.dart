@@ -208,23 +208,7 @@ class DetailKatalogScreen extends StatefulWidget {
 }
 
 class _DetailKatalogScreenState extends State<DetailKatalogScreen> {
-  bool _isFavorite = false;
   int _itemCount = 1;
-
-  void _toggleFavorite() {
-    setState(() {
-      _isFavorite = !_isFavorite;
-    });
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          _isFavorite ? 'Dimasukkan ke dalam Favorit' : 'Dihapus dari Favorit',
-        ),
-        duration: const Duration(seconds: 1),
-      ),
-    );
-  }
 
   void _incrementCount() {
     setState(() {
@@ -269,16 +253,6 @@ class _DetailKatalogScreenState extends State<DetailKatalogScreen> {
       appBar: AppBar(
         title: const Text('Detail Produk'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        actions: [
-          IconButton(
-            icon: Icon(
-              _isFavorite ? Icons.favorite : Icons.favorite_border,
-              color: _isFavorite ? Colors.red : null,
-            ),
-            onPressed: _toggleFavorite,
-            tooltip: 'Favorit',
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
