@@ -126,7 +126,6 @@ class KatalogScreen extends StatelessWidget {
       title: 'Sabun Mandi Antiseptik',
       subtitle: 'Perlindungan kuman & kulit tetap lembut',
       rawPrice: 4500,
-      icon: Icons.clean_hands,
       description:
           'Sabun mandi cair antiseptik yang efektif membersihkan kulit dari kuman dan bakteri sekaligus menjaga kelembapan alami kulit sepanjang hari.',
     ),
@@ -134,7 +133,6 @@ class KatalogScreen extends StatelessWidget {
       title: 'Shampo Anti Ketombe',
       subtitle: 'Rambut segar & bebas ketombe seharian',
       rawPrice: 22000,
-      icon: Icons.sanitizer,
       description:
           'Shampo khusus dengan formula menthol dan ZPTO yang efektif menghilangkan ketombe, mengurangi rasa gatal, serta memberikan sensasi dingin menyegarkan di kulit kepala.',
     ),
@@ -142,7 +140,6 @@ class KatalogScreen extends StatelessWidget {
       title: 'Detergen Pakaian Konsentrat',
       subtitle: 'Bersih maksimal & wangi tahan lama',
       rawPrice: 18500,
-      icon: Icons.local_laundry_service,
       description:
           'Detergen bubuk konsentrat dengan teknologi anti-noda membandel dan aroma kesegaran bunga yang tahan lama hingga 14 hari.',
     ),
