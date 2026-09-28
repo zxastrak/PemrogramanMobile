@@ -1,6 +1,6 @@
 {
-    "name": "tugas5",
-    "short_name": "tugas5",
+    "name": "pbl_uas_inventory",
+    "short_name": "pbl_uas_inventory",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
